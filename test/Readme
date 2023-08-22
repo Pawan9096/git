@@ -1,0 +1,14 @@
+Create a new file under test folder
+Add module ‘playwright/test’
+const { test, expect } = require('@playwright/test');
+test('Rationarium login',  async ({page}) =＞ {
+    await page.goto('https://app.rationarium.com/');
+    await expect(page).toHaveTitle('rationarium');
+})
+The keyword async before a function makes the function return a promise
+The keyword await before a function makes the function wait for a promise
+Click on sign in Sign in button
+Enetr the email and password
+Click on Sign in
+User is not able to login
+Test case gets success
